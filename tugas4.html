@@ -439,7 +439,7 @@ document.write(`
 
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">timedelta</span>
 <span class="n">start_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">end_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="n">news_data</span> <span class="o">=</span> <span class="n">scrape_news_data</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
 </pre></div>
@@ -448,19 +448,19 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-1-5cb1aea976b2&gt;</span> in <span class="ni">&lt;cell line: 44&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nn">&lt;ipython-input-1-499eb0a43721&gt;</span> in <span class="ni">&lt;cell line: 44&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">43</span> 
 <span class="ne">---&gt; </span><span class="mi">44</span> <span class="n">news_data</span> <span class="o">=</span> <span class="n">scrape_news_data</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
 
-<span class="nn">&lt;ipython-input-1-5cb1aea976b2&gt;</span> in <span class="ni">scrape_news_data</span><span class="nt">(start_date, end_date)</span>
+<span class="nn">&lt;ipython-input-1-499eb0a43721&gt;</span> in <span class="ni">scrape_news_data</span><span class="nt">(start_date, end_date)</span>
 <span class="g g-Whitespace">     </span><span class="mi">28</span>                 <span class="n">title</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">text</span>
 <span class="g g-Whitespace">     </span><span class="mi">29</span>                 <span class="n">article_url</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
 <span class="ne">---&gt; </span><span class="mi">30</span>                 <span class="n">content</span> <span class="o">=</span> <span class="n">get_article_content</span><span class="p">(</span><span class="n">article_url</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">31</span> 
 <span class="g g-Whitespace">     </span><span class="mi">32</span>                 <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">current_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">),</span> <span class="s1">&#39;Title&#39;</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;Content&#39;</span><span class="p">:</span> <span class="n">content</span><span class="p">})</span>
 
-<span class="nn">&lt;ipython-input-1-5cb1aea976b2&gt;</span> in <span class="ni">get_article_content</span><span class="nt">(article_url)</span>
+<span class="nn">&lt;ipython-input-1-499eb0a43721&gt;</span> in <span class="ni">get_article_content</span><span class="nt">(article_url)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">get_article_content</span><span class="p">(</span><span class="n">article_url</span><span class="p">):</span>
 <span class="ne">----&gt; </span><span class="mi">6</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">article_url</span><span class="p">)</span>
@@ -468,102 +468,88 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="s2"> </span>
-<span class="ne">---&gt; </span><span class="mi">73</span><span class="s2">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="sd"> </span>
+<span class="ne">---&gt; </span><span class="mi">73</span><span class="sd">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="sd"> </span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2">     # cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">     with sessions.Session() as session:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="sd">     # cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="sd">     with sessions.Session() as session:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span><span class="sd">         return session.request(method=method, url=url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="sd"> </span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="s2">         }</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="s2">         send_kwargs.update(settings)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="s2">         return resp</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="sd">         }</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="sd">         send_kwargs.update(settings)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span><span class="sd">         resp = self.send(prep, **send_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="sd">         return resp</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         # Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">745</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">746</span><span class="sd">         if not stream:</span>
+<span class="ne">--&gt; </span><span class="mi">747</span><span class="sd">             r.content</span>
+<span class="g g-Whitespace">    </span><span class="mi">748</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">749</span><span class="sd">         return r</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="s2">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">486</span><span class="s2">             resp = conn.urlopen(</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span><span class="s2">                 method=request.method,</span>
-<span class="g g-Whitespace">    </span><span class="mi">488</span><span class="s2">                 url=url,</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/models.py</span> in <span class="ni">content</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">897</span><span class="sd">                 self._content = None</span>
+<span class="g g-Whitespace">    </span><span class="mi">898</span><span class="sd">             else:</span>
+<span class="ne">--&gt; </span><span class="mi">899</span><span class="sd">                 self._content = b&quot;&quot;.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">900</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">901</span><span class="sd">         self._content_consumed = True</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="s2">             # Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">791</span><span class="s2">             response = self._make_request(</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="s2">                 conn,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="s2">                 method,</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/models.py</span> in <span class="ni">generate</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">814</span><span class="sd">             if hasattr(self.raw, &quot;stream&quot;):</span>
+<span class="g g-Whitespace">    </span><span class="mi">815</span><span class="sd">                 try:</span>
+<span class="ne">--&gt; </span><span class="mi">816</span><span class="sd">                     yield from self.raw.stream(chunk_size, decode_content=True)</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span><span class="sd">                 except ProtocolError as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">818</span><span class="sd">                     raise ChunkedEncodingError(e)</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span><span class="s2">         # Receive the response from the server</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span><span class="s2">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">537</span><span class="s2">             response = conn.getresponse()</span>
-<span class="g g-Whitespace">    </span><span class="mi">538</span><span class="s2">         except (BaseSSLError, OSError) as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">539</span><span class="s2">             self._raise_timeout(err=e, url=url, timeout_value=read_timeout)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/response.py</span> in <span class="ni">stream</span><span class="nt">(self, amt, decode_content)</span>
+<span class="g g-Whitespace">    </span><span class="mi">931</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">932</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunked</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">supports_chunked_reads</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">933</span>             <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_chunked</span><span class="p">(</span><span class="n">amt</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">934</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span>             <span class="k">while</span> <span class="ow">not</span> <span class="n">is_fp_closed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">459</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">460</span><span class="s2">         # Get the response from http.client.HTTPConnection</span>
-<span class="ne">--&gt; </span><span class="mi">461</span><span class="s2">         httplib_response = super().getresponse()</span>
-<span class="g g-Whitespace">    </span><span class="mi">462</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span><span class="s2">         try:</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/response.py</span> in <span class="ni">read_chunked</span><span class="nt">(self, amt, decode_content)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1071</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1072</span>             <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1073</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_update_chunk_length</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1074</span>                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk_left</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1075</span>                     <span class="k">break</span>
 
-<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1373</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1374</span><span class="s2">             try:</span>
-<span class="ne">-&gt; </span><span class="mi">1375</span><span class="s2">                 response.begin()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1376</span><span class="s2">             except ConnectionError:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1377</span><span class="s2">                 self.close()</span>
-
-<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span><span class="s2">         # read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span><span class="s2">         while True:</span>
-<span class="ne">--&gt; </span><span class="mi">318</span><span class="s2">             version, status, reason = self._read_status()</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="s2">             if status != CONTINUE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span><span class="s2">                 break</span>
-
-<span class="nn">/usr/lib/python3.10/http/client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span><span class="s2">     def _read_status(self):</span>
-<span class="ne">--&gt; </span><span class="mi">279</span><span class="s2">         line = str(self.fp.readline(_MAXLINE + 1), &quot;iso-8859-1&quot;)</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span><span class="s2">         if len(line) &gt; _MAXLINE:</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span><span class="s2">             raise LineTooLong(&quot;status line&quot;)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/response.py</span> in <span class="ni">_update_chunk_length</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">999</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk_left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1000</span>             <span class="k">return</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1001</span>         <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>  <span class="c1"># type: ignore[union-attr]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1002</span>         <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1003</span>         <span class="k">try</span><span class="p">:</span>
 
 <span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="s2">         while True:</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2">             try:</span>
-<span class="ne">--&gt; </span><span class="mi">705</span><span class="s2">                 return self._sock.recv_into(b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="s2">             except timeout:</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span><span class="s2">                 self._timeout_occurred = True</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">705</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>             <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1272</span><span class="s2">                   &quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot; %</span>
-<span class="g g-Whitespace">   </span><span class="mi">1273</span><span class="s2">                   self.__class__)</span>
-<span class="ne">-&gt; </span><span class="mi">1274</span><span class="s2">             return self.read(nbytes, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span><span class="s2">         else:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span><span class="s2">             return super().recv_into(buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>                   <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>                   <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1274</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1275</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
 
 <span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span><span class="s2">         try:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1129</span><span class="s2">             if buffer is not None:</span>
-<span class="ne">-&gt; </span><span class="mi">1130</span><span class="s2">                 return self._sslobj.read(len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1131</span><span class="s2">             else:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1132</span><span class="s2">                 return self._sslobj.read(len)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span>         <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1129</span>             <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1130</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -600,7 +586,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-501597ba-b41d-423d-b2ee-ad766210c47b" class="colab-df-container">
+  <div id="df-f2df8cc7-91de-4fa6-87bc-9efcbba94a0e" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -662,117 +648,55 @@ document.write(`
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>01-10-2023</td>
-      <td>Dandim 0802/Ponorogo Jadi Irup Pada Upacara Ha...</td>
-      <td>\nPonorogo,-Komandan Kodim 0802/Ponorogo, Letk...</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>10-10-2023</td>
+      <td>Sinergitas Antara TNI, Polri Dan Satpol-PP Ama...</td>
+      <td>Magetan.tribunjatim.co – Koramil Tipe B 0804/0...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>01-10-2023</td>
-      <td>Komandan Kodim 0804/Magetan Letkol Inf Dani In...</td>
-      <td>Peringatan Hari Kesaktian Pancasila tanggal 1 ...</td>
+      <th>95</th>
+      <td>10-10-2023</td>
+      <td>Kodim 0802/Ponorogo Gelar Syukuran HUT ke 78 T...</td>
+      <td>\n \nPonorogo,-Kodim 0802/Ponorogo hari ini me...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>01-10-2023</td>
-      <td>Gotong royong Bersama Warga, Babinsa Koramil D...</td>
-      <td>\nMadiun – Babinsa Koramil 14/Dagangan, Kodim...</td>
+      <th>96</th>
+      <td>10-10-2023</td>
+      <td>Babinsa Berikan Pelatihan PBB dan Materi Wawas...</td>
+      <td>\nMadiun – Satuan Linmas adalah warga masyara...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>01-10-2023</td>
-      <td>Peringati Hari Kesaktian Pancasila, Ini Pesan ...</td>
-      <td>\nMadiun – Hari Kesaktian Pancasila diperinga...</td>
+      <th>97</th>
+      <td>10-10-2023</td>
+      <td>Babinsa Dampingi Penyaluran Bantuan Pangan Dar...</td>
+      <td>\nMadiun – Pemerintah melalui PT Pos Indonesi...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>01-10-2023</td>
-      <td>Open Turnamen Badminton Danrem Cup 2023 Resmi ...</td>
-      <td>Jakarta- Tribunjatim.co – Komandan Korem 143/H...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>02-10-2023</td>
-      <td>Peringati HUT ke 78 TNI Tahun 2023, Kodim 0802...</td>
-      <td>\n \nPonorogo,-Memperingati Hari Ulang Tahun (...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>02-10-2023</td>
-      <td>Satgas TMMD 118 Beri Penyuluhan Kamtibmas di D...</td>
-      <td>Magetan, Poncol | Satuan tugas program TNI Man...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>02-10-2023</td>
-      <td>Dandim 0802/Ponorogo Pimpin Acara Korps Kenaik...</td>
-      <td>\n \nPonorogo,- Komandan Kodim 0802/Ponorogo, ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>02-10-2023</td>
-      <td>Dandim Madiun Pimpin Prosesi Pelepasan Perwira...</td>
-      <td>\nMadiun – Sebagai bentuk penghormatan, bagi ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>02-10-2023</td>
-      <td>Dandim Madiun Terima Laporan Kenaikan Pangkat ...</td>
-      <td>\nMadiun – Komandan Kodim 0803/Madiun Letkol ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>02-10-2023</td>
-      <td>Danramil 0804/01 Magetan Jadi Irup Upacara Har...</td>
-      <td>MAGETAN.tribunjatim.co – Danramil Tipe B 0804/...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>02-10-2023</td>
-      <td>Cara Polres Nganjuk Jaga Kerukunan dan Waspada...</td>
-      <td>Nganjuk – Tribunjatim.co – Upaya menjaga keruk...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>02-10-2023</td>
-      <td>Babinsa Nganjuk Masuk Sekolah Sekolah Berikan ...</td>
-      <td>Nganjuk – Tribunjatim.co – Untuk menumbuhkan j...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>02-10-2023</td>
-      <td>Siapkan Generasi Yang Sehat Babinsa bersama Bi...</td>
-      <td>Nganjuk- Tribunajtim.co – Babinsa Koptu Gatot ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>02-10-2023</td>
-      <td>Dandim 0804/Magetan Tinjau Penanganan Kebakara...</td>
-      <td>Magetan.tribunjatim.co – Dandim 0804/Magetan L...</td>
+      <th>98</th>
+      <td>10-10-2023</td>
+      <td>Peduli Pendidikan Anak Sejak Dini, Babinsa Tan...</td>
+      <td>Magetan.tribunjatim.co– Danramil 0804/08 Barat...</td>
       <td>Aparat Keamanan</td>
     </tr>
   </tbody>
 </table>
+<p>99 rows × 4 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-501597ba-b41d-423d-b2ee-ad766210c47b')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f2df8cc7-91de-4fa6-87bc-9efcbba94a0e')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -824,12 +748,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-501597ba-b41d-423d-b2ee-ad766210c47b button.colab-df-convert');
+        document.querySelector('#df-f2df8cc7-91de-4fa6-87bc-9efcbba94a0e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-501597ba-b41d-423d-b2ee-ad766210c47b');
+        const element = document.querySelector('#df-f2df8cc7-91de-4fa6-87bc-9efcbba94a0e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -849,8 +773,8 @@ document.write(`
   </div>
 
 
-<div id="df-11ab3d4c-2c38-4acb-8873-0e6127eaea10">
-  <button class="colab-df-quickchart" onclick="quickchart('df-11ab3d4c-2c38-4acb-8873-0e6127eaea10')"
+<div id="df-af479524-4337-4b79-831f-243f8ae4d8e4">
+  <button class="colab-df-quickchart" onclick="quickchart('df-af479524-4337-4b79-831f-243f8ae4d8e4')"
             title="Suggest charts"
             style="display:none;">
 
@@ -969,7 +893,7 @@ document.write(`
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-11ab3d4c-2c38-4acb-8873-0e6127eaea10 button');
+        document.querySelector('#df-af479524-4337-4b79-831f-243f8ae4d8e4 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -1019,7 +943,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-81dd0d3e-3195-4498-8625-a7641cb3aa00" class="colab-df-container">
+  <div id="df-9b630715-4b42-41db-a298-5da16aef1662" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1081,117 +1005,55 @@ document.write(`
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>01-10-2023</td>
-      <td>Dandim 0802/Ponorogo Jadi Irup Pada Upacara Ha...</td>
-      <td>\nPonorogo,-Komandan Kodim 0802/Ponorogo, Letk...</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>10-10-2023</td>
+      <td>Sinergitas Antara TNI, Polri Dan Satpol-PP Ama...</td>
+      <td>Magetan.tribunjatim.co – Koramil Tipe B 0804/0...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>01-10-2023</td>
-      <td>Komandan Kodim 0804/Magetan Letkol Inf Dani In...</td>
-      <td>Peringatan Hari Kesaktian Pancasila tanggal 1 ...</td>
+      <th>95</th>
+      <td>10-10-2023</td>
+      <td>Kodim 0802/Ponorogo Gelar Syukuran HUT ke 78 T...</td>
+      <td>\n \nPonorogo,-Kodim 0802/Ponorogo hari ini me...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>01-10-2023</td>
-      <td>Gotong royong Bersama Warga, Babinsa Koramil D...</td>
-      <td>\nMadiun – Babinsa Koramil 14/Dagangan, Kodim...</td>
+      <th>96</th>
+      <td>10-10-2023</td>
+      <td>Babinsa Berikan Pelatihan PBB dan Materi Wawas...</td>
+      <td>\nMadiun – Satuan Linmas adalah warga masyara...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>01-10-2023</td>
-      <td>Peringati Hari Kesaktian Pancasila, Ini Pesan ...</td>
-      <td>\nMadiun – Hari Kesaktian Pancasila diperinga...</td>
+      <th>97</th>
+      <td>10-10-2023</td>
+      <td>Babinsa Dampingi Penyaluran Bantuan Pangan Dar...</td>
+      <td>\nMadiun – Pemerintah melalui PT Pos Indonesi...</td>
       <td>Aparat Keamanan</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>01-10-2023</td>
-      <td>Open Turnamen Badminton Danrem Cup 2023 Resmi ...</td>
-      <td>Jakarta- Tribunjatim.co – Komandan Korem 143/H...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>02-10-2023</td>
-      <td>Peringati HUT ke 78 TNI Tahun 2023, Kodim 0802...</td>
-      <td>\n \nPonorogo,-Memperingati Hari Ulang Tahun (...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>02-10-2023</td>
-      <td>Satgas TMMD 118 Beri Penyuluhan Kamtibmas di D...</td>
-      <td>Magetan, Poncol | Satuan tugas program TNI Man...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>02-10-2023</td>
-      <td>Dandim 0802/Ponorogo Pimpin Acara Korps Kenaik...</td>
-      <td>\n \nPonorogo,- Komandan Kodim 0802/Ponorogo, ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>02-10-2023</td>
-      <td>Dandim Madiun Pimpin Prosesi Pelepasan Perwira...</td>
-      <td>\nMadiun – Sebagai bentuk penghormatan, bagi ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>02-10-2023</td>
-      <td>Dandim Madiun Terima Laporan Kenaikan Pangkat ...</td>
-      <td>\nMadiun – Komandan Kodim 0803/Madiun Letkol ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>02-10-2023</td>
-      <td>Danramil 0804/01 Magetan Jadi Irup Upacara Har...</td>
-      <td>MAGETAN.tribunjatim.co – Danramil Tipe B 0804/...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>02-10-2023</td>
-      <td>Cara Polres Nganjuk Jaga Kerukunan dan Waspada...</td>
-      <td>Nganjuk – Tribunjatim.co – Upaya menjaga keruk...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>02-10-2023</td>
-      <td>Babinsa Nganjuk Masuk Sekolah Sekolah Berikan ...</td>
-      <td>Nganjuk – Tribunjatim.co – Untuk menumbuhkan j...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>02-10-2023</td>
-      <td>Siapkan Generasi Yang Sehat Babinsa bersama Bi...</td>
-      <td>Nganjuk- Tribunajtim.co – Babinsa Koptu Gatot ...</td>
-      <td>Aparat Keamanan</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>02-10-2023</td>
-      <td>Dandim 0804/Magetan Tinjau Penanganan Kebakara...</td>
-      <td>Magetan.tribunjatim.co – Dandim 0804/Magetan L...</td>
+      <th>98</th>
+      <td>10-10-2023</td>
+      <td>Peduli Pendidikan Anak Sejak Dini, Babinsa Tan...</td>
+      <td>Magetan.tribunjatim.co– Danramil 0804/08 Barat...</td>
       <td>Aparat Keamanan</td>
     </tr>
   </tbody>
 </table>
+<p>99 rows × 4 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-81dd0d3e-3195-4498-8625-a7641cb3aa00')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9b630715-4b42-41db-a298-5da16aef1662')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1243,12 +1105,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-81dd0d3e-3195-4498-8625-a7641cb3aa00 button.colab-df-convert');
+        document.querySelector('#df-9b630715-4b42-41db-a298-5da16aef1662 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-81dd0d3e-3195-4498-8625-a7641cb3aa00');
+        const element = document.querySelector('#df-9b630715-4b42-41db-a298-5da16aef1662');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1268,8 +1130,8 @@ document.write(`
   </div>
 
 
-<div id="df-d7c31989-5d24-4b7a-be93-7d5673ff0134">
-  <button class="colab-df-quickchart" onclick="quickchart('df-d7c31989-5d24-4b7a-be93-7d5673ff0134')"
+<div id="df-60fdacda-97c7-4b35-b636-0467111e2a65">
+  <button class="colab-df-quickchart" onclick="quickchart('df-60fdacda-97c7-4b35-b636-0467111e2a65')"
             title="Suggest charts"
             style="display:none;">
 
@@ -1388,7 +1250,7 @@ document.write(`
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-d7c31989-5d24-4b7a-be93-7d5673ff0134 button');
+        document.querySelector('#df-60fdacda-97c7-4b35-b636-0467111e2a65 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -1410,12 +1272,14 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sastrawi
   Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">4.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ <span class=" -Color -Color-Green">204.8/209.7 kB</span> <span class=" -Color -Color-Red">6.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">5.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hInstalling collected packages: sastrawi
 Successfully installed sastrawi-1.0.1
 Collecting swifter
   Downloading swifter-1.4.0.tar.gz (1.2 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.2/1.2 MB</span> <span class=" -Color -Color-Red">10.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.2/1.2 MB</span> <span class=" -Color -Color-Red">23.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h  Preparing metadata (setup.py) ... ?25l?25hdone
 Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from swifter) (1.5.3)
 Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.10/dist-packages (from swifter) (5.9.5)
@@ -1437,7 +1301,7 @@ Requirement already satisfied: locket in /usr/local/lib/python3.10/dist-packages
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas&gt;=1.0.0-&gt;swifter) (1.16.0)
 Building wheels for collected packages: swifter
   Building wheel for swifter (setup.py) ... ?25l?25hdone
-  Created wheel for swifter: filename=swifter-1.4.0-py3-none-any.whl size=16505 sha256=a02658ec54d1db4123f7decde230cc15982814958d335fd0aa14584ffe6513b4
+  Created wheel for swifter: filename=swifter-1.4.0-py3-none-any.whl size=16505 sha256=22e7733183a9121dbb002fa1eecb5ee413ea203d0fc3734df0d16afd33e2f661
   Stored in directory: /root/.cache/pip/wheels/e4/cf/51/0904952972ee2c7aa3709437065278dc534ec1b8d2ad41b443
 Successfully built swifter
 Installing collected packages: swifter
@@ -1459,7 +1323,7 @@ Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.10
 <span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">)</span>
 
 <span class="c1"># Berikan berita yang ingin diringkas</span>
-<span class="n">berita</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">berita</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Content&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 
 <span class="c1"># Analisis teks menggunakan spaCy</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">berita</span><span class="p">)</span>
@@ -1474,10 +1338,8 @@ Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.10
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nganjuk – Tribunjatim.co – Aparat Kepolisian Sektor (Polsek) Ngluyu mengamankan pria berinisial RFP (33), warga Kecamatan Sukomoro, Kabupaten Nganjuk, Jawa Timur, Jumat (28/7/2023) petang.
- 
- RFP diamankan polisi karena mengaku sebagai anggota Tentara Nasional Indonesia (TNI) berpangkat Prajurit Kepala (Praka). Padahal ia adalah warga sipil biasa alias TNI gadungan.
- Kepala Seksi Hubungan Masyarakat Kepolisian Resor (Kasi Humas Polres)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Magetan. tribunjatim.co-Babinsa Koramil 0804/01 Magetan Serda Untung menghadiri pelaksanaan kegiatan Pelayanan Program KB dalam rangka Hari Kontrasepsi sedunia dengan jumlah peserta 9 orang bertempat di RSIA Samudra Husada jalan Samudra Kelurahan Bulukerto Kec. Magetan Kab. Magetan (01 Oktober 2023)
+Kegiatan Pelayanan Program KB dalam rangka
 </pre></div>
 </div>
 </div>
@@ -1520,69 +1382,60 @@ Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.10
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kalimat 1: Nganjuk – Tribunjatim.co – Aparat Kepolisian Sektor (Polsek) Ngluyu mengamankan pria berinisial RFP (33), warga Kecamatan Sukomoro, Kabupaten Nganjuk, Jawa Timur, Jumat (28/7/2023) petang.
-2023: 0.2005
-28: 0.2005
-33: 0.2005
-aparat: 0.2005
-berinisial: 0.2005
-co: 0.2005
-jawa: 0.2005
-jumat: 0.2005
-kabupaten: 0.2005
-kecamatan: 0.2005
-kepolisian: 0.1581
-mengamankan: 0.2005
-nganjuk: 0.4011
-ngluyu: 0.2005
-petang: 0.2005
-polsek: 0.2005
-pria: 0.2005
-rfp: 0.1581
-sektor: 0.2005
-sukomoro: 0.2005
-timur: 0.2005
-tribunjatim: 0.2005
-warga: 0.1581
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kalimat 1: Magetan.
+magetan: 1.0000
 
-Kalimat 2: RFP diamankan polisi karena mengaku sebagai anggota Tentara Nasional Indonesia (TNI) berpangkat Prajurit Kepala (Praka).
-anggota: 0.2686
-berpangkat: 0.2686
-diamankan: 0.2686
-indonesia: 0.2686
-karena: 0.2686
-kepala: 0.2117
-mengaku: 0.2686
-nasional: 0.2686
-polisi: 0.2686
-prajurit: 0.2686
-praka: 0.2686
-rfp: 0.2117
-sebagai: 0.2686
-tentara: 0.2686
-tni: 0.2117
+Kalimat 2: tribunjatim.co-Babinsa Koramil 0804/01 Magetan Serda Untung menghadiri pelaksanaan kegiatan Pelayanan Program KB dalam rangka Hari Kontrasepsi sedunia dengan jumlah peserta 9 orang bertempat di RSIA Samudra Husada jalan Samudra Kelurahan Bulukerto Kec.
+01: 0.1380
+0804: 0.1751
+babinsa: 0.1751
+bertempat: 0.1751
+bulukerto: 0.1751
+co: 0.1751
+dalam: 0.1380
+dengan: 0.1751
+di: 0.1751
+hari: 0.1751
+husada: 0.1751
+jalan: 0.1751
+jumlah: 0.1751
+kb: 0.1380
+kec: 0.1751
+kegiatan: 0.1380
+kelurahan: 0.1751
+kontrasepsi: 0.1751
+koramil: 0.1751
+magetan: 0.0914
+menghadiri: 0.1751
+orang: 0.1751
+pelaksanaan: 0.1751
+pelayanan: 0.1380
+peserta: 0.1751
+program: 0.1380
+rangka: 0.1380
+rsia: 0.1751
+samudra: 0.3502
+sedunia: 0.1751
+serda: 0.1751
+tribunjatim: 0.1751
+untung: 0.1751
 
-Kalimat 3: Padahal ia adalah warga sipil biasa alias TNI gadungan.
-adalah: 0.3483
-alias: 0.3483
-biasa: 0.3483
-gadungan: 0.3483
-ia: 0.3483
-padahal: 0.3483
-sipil: 0.3483
-tni: 0.2746
-warga: 0.2746
+Kalimat 3: Magetan Kab.
+kab: 0.8865
+magetan: 0.4626
 
-Kalimat 4: Kepala Seksi Hubungan Masyarakat Kepolisian Resor (Kasi Humas Polres)
-hubungan: 0.3483
-humas: 0.3483
-kasi: 0.3483
-kepala: 0.2746
-kepolisian: 0.2746
-masyarakat: 0.3483
-polres: 0.3483
-resor: 0.3483
-seksi: 0.3483
+Kalimat 4: Magetan (01 Oktober 2023)
+Kegiatan Pelayanan Program KB dalam rangka
+01: 0.3063
+2023: 0.3886
+dalam: 0.3063
+kb: 0.3063
+kegiatan: 0.3063
+magetan: 0.2028
+oktober: 0.3886
+pelayanan: 0.3063
+program: 0.3063
+rangka: 0.3063
 </pre></div>
 </div>
 </div>
@@ -1611,12 +1464,12 @@ seksi: 0.3483
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Similarity Kalimat 1 dan Kalimat 2: 0.0335
-Similarity Kalimat 1 dan Kalimat 3: 0.0434
-Similarity Kalimat 1 dan Kalimat 4: 0.0434
-Similarity Kalimat 2 dan Kalimat 3: 0.0581
-Similarity Kalimat 2 dan Kalimat 4: 0.0581
-Similarity Kalimat 3 dan Kalimat 4: 0.0000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Similarity Kalimat 1 dan Kalimat 2: 0.0914
+Similarity Kalimat 1 dan Kalimat 3: 0.4626
+Similarity Kalimat 1 dan Kalimat 4: 0.2028
+Similarity Kalimat 2 dan Kalimat 3: 0.0423
+Similarity Kalimat 2 dan Kalimat 4: 0.3145
+Similarity Kalimat 3 dan Kalimat 4: 0.0938
 </pre></div>
 </div>
 </div>
@@ -1630,7 +1483,7 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7cbe7383-9244-4d6d-9ef3-704628e129e4" class="colab-df-container">
+  <div id="df-e8c06f09-c682-450c-b371-38f4caa94208" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1659,29 +1512,29 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
     <tr>
       <th>0</th>
       <td>1.000000</td>
-      <td>0.033478</td>
-      <td>0.043418</td>
-      <td>0.043418</td>
+      <td>0.091364</td>
+      <td>0.462637</td>
+      <td>0.202766</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.033478</td>
+      <td>0.091364</td>
       <td>1.000000</td>
-      <td>0.058144</td>
-      <td>0.058144</td>
+      <td>0.042268</td>
+      <td>0.314529</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.043418</td>
-      <td>0.058144</td>
+      <td>0.462637</td>
+      <td>0.042268</td>
       <td>1.000000</td>
-      <td>0.000000</td>
+      <td>0.093807</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.043418</td>
-      <td>0.058144</td>
-      <td>0.000000</td>
+      <td>0.202766</td>
+      <td>0.314529</td>
+      <td>0.093807</td>
       <td>1.000000</td>
     </tr>
   </tbody>
@@ -1690,7 +1543,7 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-7cbe7383-9244-4d6d-9ef3-704628e129e4')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e8c06f09-c682-450c-b371-38f4caa94208')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1742,12 +1595,12 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
 
     <script>
       const buttonEl =
-        document.querySelector('#df-7cbe7383-9244-4d6d-9ef3-704628e129e4 button.colab-df-convert');
+        document.querySelector('#df-e8c06f09-c682-450c-b371-38f4caa94208 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-7cbe7383-9244-4d6d-9ef3-704628e129e4');
+        const element = document.querySelector('#df-e8c06f09-c682-450c-b371-38f4caa94208');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1767,8 +1620,8 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
   </div>
 
 
-<div id="df-223f0322-16c2-4a37-a1d2-e2db146c9eef">
-  <button class="colab-df-quickchart" onclick="quickchart('df-223f0322-16c2-4a37-a1d2-e2db146c9eef')"
+<div id="df-5147970c-c90b-41c4-9ad5-4c2344187b2b">
+  <button class="colab-df-quickchart" onclick="quickchart('df-5147970c-c90b-41c4-9ad5-4c2344187b2b')"
             title="Suggest charts"
             style="display:none;">
 
@@ -1887,7 +1740,7 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-223f0322-16c2-4a37-a1d2-e2db146c9eef button');
+        document.querySelector('#df-5147970c-c90b-41c4-9ad5-4c2344187b2b button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -1922,7 +1775,7 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5c2dc71df77d353d229356175af2e238f2a734cb3985b98e2aee2ef0f9cad802.png" src="_images/5c2dc71df77d353d229356175af2e238f2a734cb3985b98e2aee2ef0f9cad802.png" />
+<img alt="_images/9a031392b0cf7a7d208e27ef91d15f253da4914dfae7539ac44a5ac13243eb98.png" src="_images/9a031392b0cf7a7d208e27ef91d15f253da4914dfae7539ac44a5ac13243eb98.png" />
 </div>
 </div>
 </section>
@@ -1943,8 +1796,8 @@ Similarity Kalimat 3 dan Kalimat 4: 0.0000
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sorted Closeness Centrality:
 Node 0: 1.0000
 Node 1: 1.0000
-Node 2: 0.7500
-Node 3: 0.7500
+Node 2: 1.0000
+Node 3: 1.0000
 </pre></div>
 </div>
 </div>
@@ -1962,13 +1815,13 @@ Node 3: 0.7500
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Node Tertinggi dengan Kalimat:
 Node 0: Closeness Centrality = 1.0000
-Kalimat: Nganjuk – Tribunjatim.co – Aparat Kepolisian Sektor (Polsek) Ngluyu mengamankan pria berinisial RFP (33), warga Kecamatan Sukomoro, Kabupaten Nganjuk, Jawa Timur, Jumat (28/7/2023) petang.
+Kalimat: Magetan.
 
 Node 1: Closeness Centrality = 1.0000
-Kalimat: RFP diamankan polisi karena mengaku sebagai anggota Tentara Nasional Indonesia (TNI) berpangkat Prajurit Kepala (Praka).
+Kalimat: tribunjatim.co-Babinsa Koramil 0804/01 Magetan Serda Untung menghadiri pelaksanaan kegiatan Pelayanan Program KB dalam rangka Hari Kontrasepsi sedunia dengan jumlah peserta 9 orang bertempat di RSIA Samudra Husada jalan Samudra Kelurahan Bulukerto Kec.
 
-Node 2: Closeness Centrality = 0.7500
-Kalimat: Padahal ia adalah warga sipil biasa alias TNI gadungan.
+Node 2: Closeness Centrality = 1.0000
+Kalimat: Magetan Kab.
 </pre></div>
 </div>
 </div>

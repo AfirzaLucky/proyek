@@ -32,6 +32,6 @@ Here is a preview of the cell contents:
 -------------------
 ['import requests', 'from bs4 import BeautifulSoup', 'import pandas as pd', '', 'def get_article_content(article_url):']
 ...
-['from datetime import date, timedelta', 'start_date = date(2023, 10, 1)', 'end_date = date(2023, 10, 2)', '', 'news_data = scrape_news_data(start_date, end_date)']
+['from datetime import date, timedelta', 'start_date = date(2023, 10, 1)', 'end_date = date(2023, 10, 10)', '', 'news_data = scrape_news_data(start_date, end_date)']
 -------------------
 
