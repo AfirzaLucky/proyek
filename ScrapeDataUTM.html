@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ScrapeDataUTM';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="tugastelu.html" />
+    <link rel="next" title="UTS - implementasi Latent Directlet allocation (LDA)" href="lda.html" />
     <link rel="prev" title="Pre Processing" href="tugas5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1 Scrape Website pta.trunojoyo.ac.id with Beautiful Soap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lda.html">UTS - implementasi Latent Directlet allocation (LDA)</a></li>
 </ul>
 
     </div>
@@ -554,7 +555,7 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dis
 <span class="ne">--&gt; </span><span class="mi">210</span>             <span class="k">raise</span> <span class="n">NameResolutionError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
 <span class="g g-Whitespace">    </span><span class="mi">211</span>         <span class="k">except</span> <span class="n">SocketTimeout</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="ne">NameResolutionError</span>: &lt;urllib3.connection.HTTPSConnection object at 0x7beb0712f730&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno -2] Name or service not known)
+<span class="ne">NameResolutionError</span>: &lt;urllib3.connection.HTTPSConnection object at 0x79fddfea9060&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno -2] Name or service not known)
 
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
@@ -574,7 +575,7 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dis
 <span class="ne">--&gt; </span><span class="mi">515</span>             <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">reason</span>  <span class="c1"># type: ignore[arg-type]</span>
 <span class="g g-Whitespace">    </span><span class="mi">516</span> 
 
-<span class="ne">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x7beb0712f730&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno -2] Name or service not known)&quot;))
+<span class="ne">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x79fddfea9060&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno -2] Name or service not known)&quot;))
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -628,7 +629,7 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dis
 <span class="g g-Whitespace">    </span><span class="mi">520</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">521</span><span class="s2">         except ClosedPoolError as e:</span>
 
-<span class="ne">ConnectionError</span>: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x7beb0712f730&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno -2] Name or service not known)&quot;))
+<span class="ne">ConnectionError</span>: HTTPSConnectionPool(host=&#39;pta.trunojoyo.ac.id&#39;, port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPSConnection object at 0x79fddfea9060&gt;: Failed to resolve &#39;pta.trunojoyo.ac.id&#39; ([Errno -2] Name or service not known)&quot;))
 </pre></div>
 </div>
 </div>
@@ -1122,11 +1123,11 @@ anda bisa mendownloadnya</p>
       </div>
     </a>
     <a class="right-next"
-       href="tugastelu.html"
+       href="lda.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">UTS - implementasi Latent Directlet allocation (LDA)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
