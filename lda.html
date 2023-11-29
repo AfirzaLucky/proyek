@@ -457,68 +457,45 @@ document.write(`
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_base.py</span> in <span class="ni">parse</span><span class="nt">(self, sheet_name, header, names, index_col, usecols, squeeze, converters, true_values, false_values, skiprows, nrows, na_values, parse_dates, date_parser, thousands, comment, skipfooter, convert_float, mangle_dupe_cols, **kwds)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1732</span>             <span class="n">DataFrame</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">passed</span> <span class="ow">in</span> <span class="n">Excel</span> <span class="n">file</span><span class="o">.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1733</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1734</span><span class="sd">         return self._reader.parse(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1735</span><span class="sd">             sheet_name=sheet_name,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1736</span><span class="sd">             header=header,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1733</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1734</span><span class="s2">         return self._reader.parse(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1735</span><span class="s2">             sheet_name=sheet_name,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1736</span><span class="s2">             header=header,</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_base.py</span> in <span class="ni">parse</span><span class="nt">(self, sheet_name, header, names, index_col, usecols, squeeze, dtype, true_values, false_values, skiprows, nrows, na_values, verbose, parse_dates, date_parser, thousands, decimal, comment, skipfooter, convert_float, mangle_dupe_cols, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">763</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">764</span><span class="sd">             file_rows_needed = self._calc_rows(header, index_col, skiprows, nrows)</span>
-<span class="ne">--&gt; </span><span class="mi">765</span><span class="sd">             data = self.get_sheet_data(sheet, convert_float, file_rows_needed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">766</span><span class="sd">             if hasattr(sheet, &quot;close&quot;):</span>
-<span class="g g-Whitespace">    </span><span class="mi">767</span><span class="sd">                 # pyxlsb opens two TemporaryFiles</span>
+<span class="g g-Whitespace">    </span><span class="mi">763</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">764</span><span class="s2">             file_rows_needed = self._calc_rows(header, index_col, skiprows, nrows)</span>
+<span class="ne">--&gt; </span><span class="mi">765</span><span class="s2">             data = self.get_sheet_data(sheet, convert_float, file_rows_needed)</span>
+<span class="g g-Whitespace">    </span><span class="mi">766</span><span class="s2">             if hasattr(sheet, &quot;close&quot;):</span>
+<span class="g g-Whitespace">    </span><span class="mi">767</span><span class="s2">                 # pyxlsb opens two TemporaryFiles</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_openpyxl.py</span> in <span class="ni">get_sheet_data</span><span class="nt">(self, sheet, convert_float, file_rows_needed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span><span class="sd">         data: list[list[Scalar]] = []</span>
-<span class="g g-Whitespace">    </span><span class="mi">614</span><span class="sd">         last_row_with_data = -1</span>
-<span class="ne">--&gt; </span><span class="mi">615</span><span class="sd">         for row_number, row in enumerate(sheet.rows):</span>
-<span class="g g-Whitespace">    </span><span class="mi">616</span><span class="sd">             converted_row = [self._convert_cell(cell, convert_float) for cell in row]</span>
-<span class="g g-Whitespace">    </span><span class="mi">617</span><span class="sd">             while converted_row and converted_row[-1] == &quot;&quot;:</span>
+<span class="g g-Whitespace">    </span><span class="mi">614</span><span class="s2">         last_row_with_data = -1</span>
+<span class="g g-Whitespace">    </span><span class="mi">615</span><span class="s2">         for row_number, row in enumerate(sheet.rows):</span>
+<span class="ne">--&gt; </span><span class="mi">616</span><span class="s2">             converted_row = [self._convert_cell(cell, convert_float) for cell in row]</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span><span class="s2">             while converted_row and converted_row[-1] == &quot;&quot;:</span>
+<span class="g g-Whitespace">    </span><span class="mi">618</span><span class="s2">                 # trim trailing empty elements</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/openpyxl/worksheet/_read_only.py</span> in <span class="ni">_cells_by_row</span><span class="nt">(self, min_col, min_row, max_col, max_row, values_only)</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span><span class="sd">                                  data_only=self.parent.data_only, epoch=self.parent.epoch,</span>
-<span class="g g-Whitespace">     </span><span class="mi">80</span><span class="sd">                                  date_formats=self.parent._date_formats)</span>
-<span class="ne">---&gt; </span><span class="mi">81</span><span class="sd">         for idx, row in parser.parse():</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span><span class="sd">             if max_row is not None and idx &gt; max_row:</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span><span class="sd">                 break</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_openpyxl.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">614</span><span class="s2">         last_row_with_data = -1</span>
+<span class="g g-Whitespace">    </span><span class="mi">615</span><span class="s2">         for row_number, row in enumerate(sheet.rows):</span>
+<span class="ne">--&gt; </span><span class="mi">616</span><span class="s2">             converted_row = [self._convert_cell(cell, convert_float) for cell in row]</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span><span class="s2">             while converted_row and converted_row[-1] == &quot;&quot;:</span>
+<span class="g g-Whitespace">    </span><span class="mi">618</span><span class="s2">                 # trim trailing empty elements</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/openpyxl/worksheet/_reader.py</span> in <span class="ni">parse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span><span class="sd">         it = iterparse(self.source) # add a finaliser to close the source when this becomes possible</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="sd"> </span>
-<span class="ne">--&gt; </span><span class="mi">156</span><span class="sd">         for _, element in it:</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span><span class="sd">             tag_name = element.tag</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span><span class="sd">             if tag_name in dispatcher:</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/io/excel/_openpyxl.py</span> in <span class="ni">_convert_cell</span><span class="nt">(self, cell, convert_float)</span>
+<span class="g g-Whitespace">    </span><span class="mi">589</span><span class="s2">         )</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">591</span><span class="s2">         if cell.value is None:</span>
+<span class="g g-Whitespace">    </span><span class="mi">592</span><span class="s2">             return &quot;&quot;  # compat with xlrd</span>
+<span class="g g-Whitespace">    </span><span class="mi">593</span><span class="s2">         elif cell.data_type == TYPE_ERROR:</span>
 
-<span class="nn">/usr/lib/python3.10/xml/etree/ElementTree.py</span> in <span class="ni">iterator</span><span class="nt">(source)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1256</span><span class="sd">                 if not data:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1257</span><span class="sd">                     break</span>
-<span class="ne">-&gt; </span><span class="mi">1258</span><span class="sd">                 pullparser.feed(data)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1259</span><span class="sd">             root = pullparser._close_and_return_root()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1260</span><span class="sd">             yield from pullparser.read_events()</span>
-
-<span class="nn">/usr/lib/python3.10/xml/etree/ElementTree.py</span> in <span class="ni">feed</span><span class="nt">(self, data)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1294</span><span class="sd">         if data:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1295</span><span class="sd">             try:</span>
-<span class="ne">-&gt; </span><span class="mi">1296</span><span class="sd">                 self._parser.feed(data)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1297</span><span class="sd">             except SyntaxError as exc:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1298</span><span class="sd">                 self._events_queue.append(exc)</span>
-
-<span class="nn">/usr/lib/python3.10/xml/etree/ElementTree.py</span> in <span class="ni">feed</span><span class="nt">(self, data)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1711</span><span class="sd">         &quot;&quot;&quot;</span><span class="n">Feed</span> <span class="n">encoded</span> <span class="n">data</span> <span class="n">to</span> <span class="n">parser</span><span class="o">.</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1712</span><span class="s2">         try:</span>
-<span class="ne">-&gt; </span><span class="mi">1713</span><span class="s2">             self.parser.Parse(data, False)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1714</span><span class="s2">         except self._error as v:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1715</span><span class="s2">             self._raiseerror(v)</span>
-
-<span class="nn">../Modules/pyexpat.c</span> in <span class="ni">StartElement</span><span class="nt">()</span>
-
-<span class="nn">/usr/lib/python3.10/xml/etree/ElementTree.py</span> in <span class="ni">_start</span><span class="nt">(self, tag, attr_list)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1639</span><span class="s2">         return self.target.end_ns(prefix or &#39;&#39;)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1640</span><span class="s2"> </span>
-<span class="ne">-&gt; </span><span class="mi">1641</span><span class="s2">     def _start(self, tag, attr_list):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1642</span><span class="s2">         # Handler for expat&#39;s StartElementHandler. Since ordered_attributes</span>
-<span class="g g-Whitespace">   </span><span class="mi">1643</span><span class="s2">         # is set, the attributes are reported as a list of alternating</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/openpyxl/cell/read_only.py</span> in <span class="ni">value</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span><span class="s2">         return self._value</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">108</span><span class="s2">     @property</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span><span class="s2">     def value(self):</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="s2">         return self._value</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
