@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -139,6 +139,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -336,6 +337,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -345,6 +347,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -494,67 +497,60 @@ document.write(`
 <span class="g g-Whitespace">    </span><span class="mi">591</span><span class="sd">         return resp</span>
 
 <span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">745</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">746</span><span class="sd">         if not stream:</span>
-<span class="ne">--&gt; </span><span class="mi">747</span><span class="sd">             r.content</span>
-<span class="g g-Whitespace">    </span><span class="mi">748</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">749</span><span class="sd">         return r</span>
+<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="sd">         # Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span><span class="sd">         r = adapter.send(request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="sd">         # Total elapsed time of the request (approximately)</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/models.py</span> in <span class="ni">content</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">897</span><span class="sd">                 self._content = None</span>
-<span class="g g-Whitespace">    </span><span class="mi">898</span><span class="sd">             else:</span>
-<span class="ne">--&gt; </span><span class="mi">899</span><span class="sd">                 self._content = b&quot;&quot;.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">901</span><span class="sd">         self._content_consumed = True</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="sd">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">486</span><span class="sd">             resp = conn.urlopen(</span>
+<span class="g g-Whitespace">    </span><span class="mi">487</span><span class="sd">                 method=request.method,</span>
+<span class="g g-Whitespace">    </span><span class="mi">488</span><span class="sd">                 url=url,</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/models.py</span> in <span class="ni">generate</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">814</span><span class="sd">             if hasattr(self.raw, &quot;stream&quot;):</span>
-<span class="g g-Whitespace">    </span><span class="mi">815</span><span class="sd">                 try:</span>
-<span class="ne">--&gt; </span><span class="mi">816</span><span class="sd">                     yield from self.raw.stream(chunk_size, decode_content=True)</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span><span class="sd">                 except ProtocolError as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">818</span><span class="sd">                     raise ChunkedEncodingError(e)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="sd">             # Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">791</span><span class="sd">             response = self._make_request(</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="sd">                 conn,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="sd">                 method,</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/response.py</span> in <span class="ni">stream</span><span class="nt">(self, amt, decode_content)</span>
-<span class="g g-Whitespace">    </span><span class="mi">931</span><span class="sd">         &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">932</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunked</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">supports_chunked_reads</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">933</span>             <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_chunked</span><span class="p">(</span><span class="n">amt</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">934</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">935</span>             <span class="k">while</span> <span class="ow">not</span> <span class="n">is_fp_closed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">466</span><span class="sd">             # Trigger any extra validation we need to do.</span>
+<span class="g g-Whitespace">    </span><span class="mi">467</span><span class="sd">             try:</span>
+<span class="ne">--&gt; </span><span class="mi">468</span><span class="sd">                 self._validate_conn(conn)</span>
+<span class="g g-Whitespace">    </span><span class="mi">469</span><span class="sd">             except (SocketTimeout, BaseSSLError) as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">470</span><span class="sd">                 self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/response.py</span> in <span class="ni">read_chunked</span><span class="nt">(self, amt, decode_content)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1071</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1072</span>             <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1073</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_update_chunk_length</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1074</span>                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk_left</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1075</span>                     <span class="k">break</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1095</span><span class="sd">         # Force connect early to allow us to validate the connection.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span><span class="sd">         if conn.is_closed:</span>
+<span class="ne">-&gt; </span><span class="mi">1097</span><span class="sd">             conn.connect()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1099</span><span class="sd">         if not conn.is_verified:</span>
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/response.py</span> in <span class="ni">_update_chunk_length</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">999</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk_left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1000</span>             <span class="k">return</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1001</span>         <span class="n">line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>  <span class="c1"># type: ignore[union-attr]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1002</span>         <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1003</span>         <span class="k">try</span><span class="p">:</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">609</span><span class="sd">     def connect(self) -&gt; None:</span>
+<span class="g g-Whitespace">    </span><span class="mi">610</span><span class="sd">         sock: socket.socket | ssl.SSLSocket</span>
+<span class="ne">--&gt; </span><span class="mi">611</span><span class="sd">         self.sock = sock = self._new_conn()</span>
+<span class="g g-Whitespace">    </span><span class="mi">612</span><span class="sd">         server_hostname: str = self.host</span>
+<span class="g g-Whitespace">    </span><span class="mi">613</span><span class="sd">         tls_in_tls = False</span>
 
-<span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">705</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>             <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">203</span>             <span class="n">sock</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">204</span>                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span>
 
-<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1272</span>                   <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1273</span>                   <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1274</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3.10/ssl.py</span> in <span class="ni">read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span>         <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1129</span>             <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1130</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1131</span>             <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1132</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>             <span class="k">if</span> <span class="n">source_address</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>                 <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">source_address</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>             <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span>             <span class="c1"># Break explicitly a reference cycle</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span>             <span class="n">err</span> <span class="o">=</span> <span class="kc">None</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1862,7 +1858,7 @@ Kalimat: Magetan Kab.
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="tugas3ku.html"
@@ -1925,6 +1921,7 @@ By The Jupyter Book Community
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -1951,8 +1948,8 @@ By The Jupyter Book Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
