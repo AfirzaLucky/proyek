@@ -106,7 +106,7 @@ The above exception was the direct cause of the following exception:
 [0;32m--> 210[0;31m             [0;32mraise[0m [0mNameResolutionError[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mhost[0m[0;34m,[0m [0mself[0m[0;34m,[0m [0me[0m[0;34m)[0m [0;32mfrom[0m [0me[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m    211[0m         [0;32mexcept[0m [0mSocketTimeout[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mNameResolutionError[0m: <urllib3.connection.HTTPSConnection object at 0x7a17bf545870>: Failed to resolve 'pta.trunojoyo.ac.id' ([Errno -2] Name or service not known)
+[0;31mNameResolutionError[0m: <urllib3.connection.HTTPSConnection object at 0x785604569030>: Failed to resolve 'pta.trunojoyo.ac.id' ([Errno -2] Name or service not known)
 
 The above exception was the direct cause of the following exception:
 
@@ -126,7 +126,7 @@ The above exception was the direct cause of the following exception:
 [0;32m--> 515[0;31m             [0;32mraise[0m [0mMaxRetryError[0m[0;34m([0m[0m_pool[0m[0;34m,[0m [0murl[0m[0;34m,[0m [0mreason[0m[0;34m)[0m [0;32mfrom[0m [0mreason[0m  [0;31m# type: ignore[arg-type][0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m    516[0m [0;34m[0m[0m
 
-[0;31mMaxRetryError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7a17bf545870>: Failed to resolve 'pta.trunojoyo.ac.id' ([Errno -2] Name or service not known)"))
+[0;31mMaxRetryError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x785604569030>: Failed to resolve 'pta.trunojoyo.ac.id' ([Errno -2] Name or service not known)"))
 
 During handling of the above exception, another exception occurred:
 
@@ -180,5 +180,5 @@ During handling of the above exception, another exception occurred:
 [0m[1;32m    520[0m [0;34m[0m[0m
 [1;32m    521[0m         [0;32mexcept[0m [0mClosedPoolError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mConnectionError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7a17bf545870>: Failed to resolve 'pta.trunojoyo.ac.id' ([Errno -2] Name or service not known)"))
+[0;31mConnectionError[0m: HTTPSConnectionPool(host='pta.trunojoyo.ac.id', port=443): Max retries exceeded with url: /c_search/byprod/10 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x785604569030>: Failed to resolve 'pta.trunojoyo.ac.id' ([Errno -2] Name or service not known)"))
 
